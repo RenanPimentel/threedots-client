@@ -7,7 +7,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
 
-const httpLink = new HttpLink({ uri: "http://localhost:4000" });
+const httpLink = new HttpLink({ uri: "https://threedots.herokuapp.com/" });
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem("userT");
