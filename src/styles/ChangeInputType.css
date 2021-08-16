@@ -1,0 +1,12 @@
+.input-eye {
+  --size: 1.25rem;
+  padding: var(--padding);
+  right: var(--size);
+  cursor: pointer;
+  display: grid;
+}
+
+.input-eye * {
+  width: var(--size);
+  height: var(--size);
+}

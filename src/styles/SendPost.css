@@ -1,0 +1,143 @@
+.send-post {
+  --size: 80px;
+  --padding-left: calc(var(--size) / 2);
+  position: relative;
+  margin-left: calc(var(--size) / 2);
+  height: 100%;
+  max-height: fit-content;
+}
+
+.send-post * {
+  font-size: 16px;
+}
+
+.img-container img {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.send-post .card-avatar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -25%);
+}
+
+.send-post .container {
+  margin: 50px 0;
+  padding: 0.5rem 1rem;
+  padding-left: var(--padding-left);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-content-editable {
+  --padding: 1rem;
+  position: relative;
+  display: flex;
+  gap: 16px;
+  flex-grow: 10;
+}
+
+.card-content-editable textarea {
+  border: none;
+  background: transparent;
+  resize: none;
+  padding: 1rem;
+  /* margin-left: var(--padding-left); */
+  font-family: inherit;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s ease;
+  height: 100%;
+  width: 100%;
+}
+
+textarea::-webkit-scrollbar {
+  background: transparent;
+}
+
+.card-content-editable label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(var(--padding), calc(50% + 0.2rem));
+  font-size: 16px;
+  line-height: 1.5rem;
+  cursor: text;
+  transition: all 0.3s ease;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.send-post:hover .container,
+.send-post:focus-within .container {
+  box-shadow: 0 0 10px -5px black;
+}
+
+.send-btn {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 12px;
+  border-radius: 9px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-post:hover .container,
+.send-post:focus-within .container {
+  border: 2px solid var(--main-color);
+}
+
+.send-btn:hover {
+  background: var(--main-color);
+  color: white;
+}
+
+.send-post.filled label,
+.send-post:focus-within label {
+  transform: translate(0, calc(-100% - 0.7rem));
+  color: black;
+  padding: 0 6px;
+}
+
+.chars-left {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  transform: translate(-1rem, 0);
+  color: gray;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.send-post:hover .chars-left,
+.send-post:focus-within .chars-left,
+.send-post.filled .chars-left {
+  opacity: 1;
+}
+
+.send-post.error .chars-left {
+  color: red;
+}
+
+.send-post.error .container {
+  border: 2px solid red;
+}
+
+.send-btn:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  background: transparent !important;
+  color: black !important;
+}

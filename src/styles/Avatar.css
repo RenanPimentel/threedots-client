@@ -1,0 +1,5 @@
+.img-container img {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}

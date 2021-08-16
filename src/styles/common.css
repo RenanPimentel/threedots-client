@@ -1,0 +1,65 @@
+:root {
+  --svg-size: 16px;
+  --main-color: rgb(82, 0, 175);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+main.page {
+  margin: auto;
+  padding: 10px;
+  max-width: 800px;
+}
+
+.same-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+svg {
+  width: var(--svg-size);
+  height: var(--svg-size);
+  animation-name: fade;
+  animation-duration: 1s;
+  transition: all 0.3s ease;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    color: var(--main-color);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    color: inherit;
+  }
+}

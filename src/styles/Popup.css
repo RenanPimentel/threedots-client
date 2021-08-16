@@ -1,0 +1,67 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  animation-name: pop;
+  animation-duration: 0.5s;
+}
+
+.popup-container {
+  margin: auto;
+  margin-top: 20vh;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  justify-content: space-around;
+}
+
+.popup-container footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.sep {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.popup-container button {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 9px;
+  transition: all 0.3s ease;
+}
+
+.popup-container button.blue-bg:hover {
+  background: rgb(14, 11, 185);
+  color: white;
+}
+
+.popup-container button.red-bg:hover {
+  background: red;
+  color: white;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
